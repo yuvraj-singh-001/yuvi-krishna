@@ -1,0 +1,970 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wedding by yuvi</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+      <!--  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />-->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+        :root{
+            --header-height:6rem;
+            --main-color:#e47a2e;
+            --second-color:#edf5f7;
+            --white-color:#ffffff;
+            --text-color:#121f38;
+            --font-body:"Montserrat", sans-serif;
+            --font-title:"Great Vibes", cursive;
+            --big-font-size: 4rem;
+            --h1-font-size: 2.25rem;
+            --h2-font-size: 1.5rem;
+            --h3-font-size: 1.25rem;
+            --normal-font-size: 1rem;
+            --small-font-size: 0.875rem;
+        }
+        *{
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            border: none;
+            outline: none;
+        }
+        html{
+            scroll-behavior: smooth;
+        }
+        body{
+            font-family: var(--font-body);
+            font-size: var(--normal-font-size);
+            background-color: var(--white-color);
+            color: var(--text-color);
+            position: relative;
+            overflow-x: hidden;
+        }
+        img{
+            width: 100%;
+            height: auto;
+        }
+.header{
+    width: 100%;
+    height: var(--header-height);
+    background-color: var(--text-color);
+    padding: 1rem 1.25rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+}
+.header-container{
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo{
+    color: var(--white-color);
+    font-family: var(--font-title);
+    font-size: var(--h1-font-size);
+    letter-spacing: 0.4rem;
+    z-index: 100;
+}
+.logo span{
+    color: var(--main-color);
+}
+.nav-menu{
+    display: flex;
+    align-items: center;
+}
+.nav-menu li{
+    margin-left: 1.5rem;
+}
+.nav-link{
+    font-size: var(--normal-font-size);
+    font-weight: 600;
+    text-transform: uppercase;
+    color: var(--white-color);
+    padding-bottom: 0.5rem;
+    text-decoration: none;
+    transition: all 0.4s ease-in-out;
+}
+.nav-link:hover, .active{
+    color: var(--main-color);
+    border-bottom: 2px solid var(--main-color);
+
+}
+.nav-toggle{
+    display: none;
+}
+
+
+/*end header */
+/* home section */
+
+.home-container{
+    padding-top: 40px;
+width: 100%;
+    max-height: 100vh;
+}
+.home-item{
+width: 100%;
+min-height: 100vh;
+position: relative;
+}
+.home-item img{
+    
+    max-width: 100%;
+    height: 600px;
+}
+.home-item .home-text{
+    position: absolute;
+    
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    color: var(--white-color);
+}
+.home-item .home-text h1{
+    font-size: 6rem;
+    font-weight: 500;
+    letter-spacing: 0.5rem;
+    font-family: var(--font-title);
+    margin-bottom: 3rem;
+    color: var(--main-color);
+}
+.home-item .home-text p{
+    font-size: var(--h1-font-size);
+    text-transform: uppercase;
+    font-weight: 500;
+    position: relative;
+    letter-spacing: 2px;
+    margin-bottom: 5rem;
+    color:  #fe214f;
+}
+.home-item .home-text p::before{
+    content: "";
+    position: absolute;
+    right: 0;
+    top: -15px;
+    text-align: center;
+    width: 100%;
+    height: 3px;
+    background-color: var(--white-color);
+}
+.home-item .home-text p::after{
+    content: "";
+    position: absolute;
+    bottom:  -15px ;
+    right: 0;
+    text-align: center;
+    width: 100%;
+    height: 3px;
+    background-color: var(--white-color);
+}
+.home-item .home-text span{
+    top: 1rem;
+    margin-top: 3rem;
+}
+.home-item .home-text span i{
+    font-size: var(--big-font-size);
+    color: var(--main-color);
+    animation: up 2s linear infinite;
+}
+@keyframes up{
+    50%{
+        transform: translateY(30px);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+.swiper-button-next , .swiper-button-prev{
+padding: 30px;
+color: var(--white-color) !important;
+background-color: var(--main-color);
+opacity: 0.7;
+}
+.swiper-button-next:hover,
+.swiper-button-prev:hover{
+    opacity: 1;
+}
+
+/* about section*/
+.about{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.about-container{
+    min-height: 100vh;
+    padding-top: var(--header-height);
+}
+.title-text{
+    display: flex;
+align-items: center;
+flex-direction: column;
+text-align: center;
+}
+.section-title{
+    color: var(--main-color);
+    font-size: var(--h2-font-size);
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    padding-top: 3rem;
+    font-weight: 400;
+}
+.main-title{
+    font-family: var(--font-title);
+    font-size: var(--big-font-size);
+    font-weight: 700;
+    letter-spacing: 5px;
+    text-transform: capitalize;
+}
+.heart{
+    position: relative;
+    color: var(--text-color);
+    font-size: var(--h1-font-size);
+    margin-bottom: 4rem;
+    margin-top: 1rem;
+}
+.heart::before{
+    content: "";
+    position: absolute;
+    height: 3px;
+    width: 100px;
+    bottom: 20px;
+    right: 40px;
+    background-color: var(--main-color);
+}
+.heart::after{
+    content: "";
+    position: absolute;
+    height: 3px;
+    width: 100px;
+    bottom: 20px;
+    left: 40px;
+    background-color: var(--main-color);
+}
+.about-box{
+display: grid;
+grid-template-columns: repeat(2,1fr);
+gap: 0;
+margin: 0;}
+.about-box .left {
+background-color: var(--second-color);
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+}
+.about-box .left h1{
+margin-top: 2rem;
+font-family: var(--h1-font-size);
+text-transform: capitalize;
+}
+.about-box .left p{
+padding: 25px 20px 0 20px;
+font-size: 300;
+line-height: 30px;
+text-align: center;
+    }
+.about-box .left span {
+font-family: var(--font-title);
+margin-right: 1.5rem;
+font-size: var(--h1-font-size);
+text-transform: capitalize;
+font-weight: 400;
+}
+.about-box .left span i{
+font-size: 3rem;
+color: var(--main-color);
+    }
+    .social-media{
+margin-top: 0.5rem;
+margin-bottom: 1.5rem;
+    }
+.social-media i{
+font-size: var(--h2-font-size);
+color: var(--main-color);
+padding: 10px;
+border: 1px solid var(--main-color);
+border-radius: 3px;
+margin-left: 0.5rem;
+cursor: pointer;
+transition: all 0.4s linear;
+}
+.social-media i:hover{
+color: var(--white-color);
+background-color: var(--main-color);
+}
+.about-box .right img {
+width: 100%;
+height: 100%;
+}
+/* story section*/
+.story{
+    max-width: 1200px;
+    margin: 0 auto;
+
+}
+.story-container{
+    min-height: 100vh;
+    padding-top: var(--header-height);
+}
+.story-items{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.story-item{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 380px;
+    background-color: var(--second-color);
+}
+
+.story-item .story-img{
+    width: 100%;
+}
+.story-item .story-img img{
+    width: 100%;
+    height: 100%;
+}
+.story-item h2{
+    padding: 30px 10px;
+    text-transform: uppercase;
+    font-size: var(--h1-font-size);
+    font-weight: 600;
+}
+.story-item p{
+    padding: 10px;
+    letter-spacing: 1px;
+    font-size: var(--normal-font-size);
+    font-weight: 300;
+}
+/*gallery*/
+.gallery{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.gallery-container{
+    min-height: 100vh;
+    padding-top: var(--header-height);
+}
+.gallery-list-img{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 2.5rem auto;
+    position: relative;
+    gap: 20px;
+
+}
+.gallery-list-img .gallery-img{
+    width: 350px;
+    cursor: pointer;
+}
+.gallery-list-img .gallery-img img{
+    margin: 0.5rem;
+    filter: drop-shadow(16px 16px 16px rgba(0,0,0,0.2));
+}
+.gallery-list-img .gallery-img:hover img{
+    transform: scale(1.02);
+}
+/* event section*/
+.event{
+    max-width: 1200px;
+    margin: 0 auto; 
+}
+.event-container{
+    min-height: 100vh;
+    padding-top: var(--header-height);
+}
+.event-container .event-text{
+    text-align: center;
+    margin-right: 100px;
+    margin-left: 100px;
+    margin-bottom: 30px;
+    font-size: var(--h2-font-size);
+    font-weight: 300;
+    line-height: 30px;
+}
+.event-container .event-items{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 30px;
+    position: relative;
+    margin: 0 10px;
+}
+.event-container .event-items::before{
+    content: "";
+    position: absolute;
+    right: 50%;
+    top: 50%;
+    transform: translate(-50% ,-50%);
+    width: 3px;
+    height: 100%;
+    background-color: var(--main-color);
+}
+.event-items .event-item{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--second-color);
+}
+.event-items .event-item .event-img{
+    width: 380px;
+}
+.event-items .event-item .event-img img{
+width: 100%;
+height: 100%;
+}
+.event-item h2{
+    font-size: var(--h2-font-size);
+    font-weight: 700;
+    padding: 20px;
+    text-transform: capitalize;
+}
+.event-item p{
+    padding: 20px;
+
+}
+.event-item span{
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+/* rsvp*/
+
+.rsvp{
+    max-width: 900px;
+    margin: 0 auto;
+
+}
+.rsvp-container{
+    padding-top: var(--header-height);
+    min-height: 100vh;
+}
+.rsvp-container form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.rsvp-container form input{
+    width: 400px;
+    height: 60px;
+    background-color: var(--second-color);
+    padding: 10px;
+    border: 1px solid var(--main-color);
+    border-radius: 10px;
+}.rsvp-container form input:hover{
+    box-shadow: 10px 6px 7px  var(--main-color);
+}
+
+.rsvp-container form input:focus{
+    border: 1px solid var(--main-color);
+}
+
+.rsvp-container form input::placeholder{
+    text-transform: capitalize;
+    font-size: var(--h3-font-size);
+    font-weight: 400;
+}
+.rsvp-container form textarea{
+    width: 820px;
+    padding: 10px;
+    background-color: var(--second-color);
+    resize: none;
+    border: 1px solid var(--main-color);
+    border-radius: 10px;
+}
+.rsvp-container form textarea::placeholder{
+    font-weight: 400;
+    font-size: var(--h3-font-size);
+    text-transform: capitalize;
+}
+.rsvp-container .rsvp-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--main-color);
+    color: var(--white-color);
+    text-transform: capitalize;
+    width: 200px;
+    height: 60px;
+    font-size: var(--h2-font-size);
+    margin: 20px auto;
+    text-decoration: none;
+    cursor: pointer;
+   
+    border-top-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+   
+}
+.rsvp-container .rsvp-btn:active{
+    transform: scale(0.98);
+}
+
+
+/* footer*/
+
+.footer-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: var(--header-height) 0;
+    width: 100%;
+    color: var(--white-color);
+    min-height: 50vh;
+    background-color: var(--text-color);
+}
+.footer-container .heart{
+    color: var(--white-color);
+}
+.footer-container .social-media i{
+    color: var(--white-color);
+    font-size: var(--h1-font-size);
+    border-color: var(--white-color);
+}
+.footer-container h2{
+    font-size: var(--h3-font-size);
+    font-weight: 300;
+    margin-top: 20px;
+}
+.footer-container .copy{
+    text-align: center;
+    margin-top: 1.5rem;
+    font-weight: 700;
+}
+
+/* scroll */
+.up{
+    position: fixed;
+    bottom: 1.5rem;
+    right: -5rem;
+    background-color: var(--main-color);
+    color: var(--white-color);
+    padding: 10px;
+    border-radius: 10px;
+    z-index: 10;
+    cursor: pointer;
+    opacity: 0.7;
+    transition: all 0.4s ease-in-out;
+}
+.up i{
+    font-size: 40px;
+    color: var(--white-color);
+    animation: scroll 1.8s linear infinite;
+}
+.up:hover{
+    opacity: 1;
+}
+.show{
+    right: 1.5rem;
+}
+
+@keyframes scroll{
+    50%{
+        transform: translateY(5px);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+
+
+/* media query*/
+@media(max-width:860px){
+    :root{
+        --big-font-size: 3rem;
+            --h1-font-size: 1.5rem;
+            --h2-font-size: 1.25rem;
+            --h3-font-size: 1rem;
+            --normal-font-size: 0.938rem;
+            --small-font-size: 0.813rem;
+    }
+    .nav{
+        width: 100%;
+        min-width: 50vh;
+        transform: translateY(-100%);
+        position: absolute;
+        top: 0;
+    left: 0;
+    right: 0;
+    background-color: var(--text-color);
+    padding-top: var(--header-height);
+    z-index: 10;
+    transition: all 0.4s ease-in-out;
+    }
+    .nav-menu{
+        display: block;
+        text-align: center;
+    }
+    .nav-menu li{
+        width: 100%;
+        padding: 1.5rem 0;
+        margin-left: 0;
+        
+
+    }
+    .nav-link{
+        font-size: var(--h3-font-size);
+
+    }
+    .nav-toggle{
+        display: block;
+        z-index: 100;
+    }
+.nav-toggle i{
+    opacity: 0.5;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid var(--white-color);
+    font-size: var(--big-font-size);
+    color: var(--white-color);
+    cursor: pointer;
+    transition: all 0.4s ease-in-out;
+}
+.nav-toggle i:hover{
+    border: 3px solid var(--white-color);
+
+}
+.show-menu{
+    transform: translateY(0);
+}
+.home{
+    padding-top: var(--header-height);
+}
+.home-item img{
+    position: absolute;
+    width: 400px;
+    height: 530px;
+}
+.home-item .home-text{
+top: 35%;
+width: 90%;
+    margin-left: 1px;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    color: var(--white-color);
+}
+.home-item .home-text span{
+    top: 1rem;
+    
+}
+.home-item .home-text h1{
+    font-size: 3.7rem;
+    font-weight: 700;
+    letter-spacing: 0.5rem;
+    font-family: var(--font-title);
+    margin-bottom: 3rem;
+    color: var(--main-color);
+}
+.home-item .home-text p{
+    font-size: 2rem;
+  margin-top: 3rem;
+    letter-spacing: 2px;
+    margin-bottom: 2rem;
+    color:  #fe214f;
+}
+/* about section */
+.about-box{
+grid-template-columns: unset;
+
+}
+/* event section */
+.event-container .event-items::before{
+    width: 0;
+}
+.event-container{
+    transform: scale(0.9);
+}
+.event-container .event-text{
+    margin-right: 50px;
+    margin-left: 50px;
+}
+/* rsvp section */
+.rsvp-container{
+transform: scale(0.9);}
+.rsvp-container form textarea{
+width: 400px;
+
+}
+}
+
+
+        </style>
+</head>
+<body>
+    <header class="header" id="header">
+        <div class="header-container ">
+            <h1 class="logo">Yuvi <span>&</span>Krishna</h1>
+            <nav class="nav ">
+                <ul class="nav-menu">
+                    <li><a href="#" class="nav-link active">home</a></li>
+                    <li><a href="#about" class="nav-link">about</a></li>
+                    <li><a href="#story" class="nav-link">story</a></li>
+                    <li><a href="#gallery" class="nav-link">gallery</a></li>
+                    <li><a href="#event" class="nav-link">event</a></li>
+                    <li><a href="#rsvp" class="nav-link">rsvp</a></li>
+                    <li><a href="#footer" class="nav-link">contact</a></li>
+
+                </ul>
+            </nav>
+            <div class="nav-toggle">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+
+<section class="home" id="home">
+  <div class="home-container ">
+    
+        <div class="home-item ">
+<div class="home-img">
+    <img src="marriage1.jpg" alt="home">
+</div>
+
+<div class="home-text">
+    <h1> Yuvi & Krishna</h1>
+    <p> We're Getting Married</p>
+    <span><i class="fa-solid fa-chevron-down fa-beat-fade"></i></span>
+</div>
+        </div>
+      <!--  <div class="home-item swiper-slide">
+            <div class="home-img">
+                <img src="marriage2.jpg" alt="home">
+            </div>
+            <div class="home-text">
+                <h1> Aryan & kajal</h1>
+                <p> We're Getting Married</p>
+                <span><i class="fa-solid fa-chevron-down fa-beat-fade"></i></span>
+            </div>
+                    </div>-->
+
+    </div>
+   
+  </div>
+
+</section>
+<!-- about section-->
+ <section class="about" id="about">
+    <div class="about-container">
+        <div class="title-text">
+            <div class="section-title">about</div>
+            <div class="main-title">Groom & bride</div>
+            <div class="heart"><i class="fa-regular fa-heart fa-beat-fade"></i></div>
+        </div>
+        <div class="about-box">
+            <div class="left">
+                <h1>the groom</h1>
+                <p>Yuvraj Singh from Aligarh, Uttar Pradesh. <br> s/o Mr. Shyoraj Singh & Mrs. Bobby Devi. </p>
+                <span><i class="fa-solid fa-person"></i> yuvraj singh</span>
+                <div class="social-media">
+                   <a href="https://yuvraj-singh-001.github.io/yuvraj-portfolio/"> <i class="fa-brands fa-twitter"></i></a>
+                   <a href="https://yuvraj-singh-001.github.io/tg/"> <i class="fa-brands fa-facebook"></i></a>
+                  <a href="http://t.me/Iccuvi">  <i class="fa-brands fa-telegram"></i></a>
+                  <a href="https://www.instagram.com/yuvraj_singh_00_3?igsh=MTR6c3hubHc5dzg0MQ==">  <i class="fa-brands fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="right">
+                <img src="yuvraj-marriage.jpg" alt="">
+            </div>
+        </div>
+        <div class="about-box">
+          <div class="right">
+                <img src="krishna-marriage2.jpg" alt="">
+            </div>
+            <div class="left">
+                <h1>the bride</h1>
+                <p>Krishna Anubhuti Shukla from Bahraich, Uttar Pradesh. <br>
+                d/o Mr. Yogesh krishna shukla & Mrs. Anju shukla</p>
+                <span><i class="fa-solid fa-person-dress"></i> Anubhuti Shukla</span>
+                <div class="social-media">
+                   <a href="#"> <i class="fa-brands fa-twitter"></i></a>
+                  <a href="#">  <i class="fa-brands fa-facebook"></i></a>
+                   <a href="https://yuvraj-singh-001.github.io/yuvi-propose/"> <i class="fa-brands fa-telegram"></i></a>
+                   <a href="#"> <i class="fa-brands fa-instagram"></i></a>
+                </div>
+            </div>
+          
+        </div>
+    </div>
+ </section>
+
+ <!-- story-->
+  <section class="story" id="story">
+    <div class="story-container">
+        <div class="title-text">
+            <div class="section-title">story</div>
+            <div class="main-title">our love story</div>
+            <div class="heart"><i class="fa-regular fa-heart fa-beat"></i></div>
+        </div>
+        <div class="story-items">
+            <div class="story-item">
+                <div class="story-image">
+                    <img src="marriage1.jpg" alt="story">
+                </div>
+                <h2>First Meet</h2>
+                <p>29 august 2024</p>
+                <p> We both used to upload videos on Snapchat.AT that time one of my video was trending a lot. Krishna ji messaged me for that video and I sent the video to her. From that day we both started talking  and then we became good friends.</p>
+            </div>
+            <div class="story-items">
+                <div class="story-item">
+                    <div class="story-image">
+                        <img src="marriage2.jpg" alt="story">
+                    </div>
+                    <h2>Second Meet</h2>
+                    <p>26 September 2024</p>
+                    <p>I had blocked Yuvraj because of some personal problem but then he messaged me so much on Snapchat I'd daily. Then i came to know that he liked me a lot. So I gave him my phone number and then we started talking.</p>
+                </div>
+              <!--  <div class="story-items">
+                    <div class="story-item">
+                        <div class="story-image">
+                            <img src="marriage3.jpg" alt="story">
+                        </div>
+                        <h2>First Meet</h2>
+                        <p>19 august 2024</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos impedit, autem corporis dolor perspiciatis, sint doloribus at excepturi, possimus eaque eum magnam animi. Distinctio tempora reprehenderit nisi quibusdam fuga libero?</p>
+                    </div>-->
+        </div>
+    </div>
+  </section>
+
+  <!-- gallery section -->
+   <section class="gallery" id="gallery">
+    <div class="gallery-container">
+        <div class="title-text">
+            <div class="section-title">gallery</div>
+            <div class="main-title">our photo gallery</div>
+            <div class="heart"><i class="fa-regular fa-heart fa-beat"></i></div>
+        </div>
+<div class="gallery-list-img">
+    <div class="gallery-img">
+        <img src="yuvraj spectle.jpg" alt="photo">
+    </div>
+
+<div class="gallery-img">
+    <img src="krishna-marriage1.jpg" alt="photo"></div>
+
+<div class="gallery-img">
+    <img src="krishna-marriage4.jpg" alt="photo"></div>
+
+<div class="gallery-img">
+    <img src="yuvraj-marriage1.jpg" alt="photo"></div>
+
+<div class="gallery-img">
+    <img src="krishna-marriage5.jpg" alt="photo">
+
+   
+     
+</div>
+    </div>
+ </div>
+   </section>
+
+<!--event section-->
+<section class="event" id="event">
+    <div class="event-container">
+        <div class="title-text">
+            <div class="section-title">event</div>
+            <div class="main-title">our wedding event</div>
+            <div class="heart"><i class="fa-regular fa-heart fa-flip"></i></div>
+        </div>
+<div class="event-text">
+    <p> WE ARE PLEASED TO INVITE YOU TO WITNESS OUR EXCHANGE OF WEDDING VOWS.<br>We request the pleasure of your company at the ceremony of their wedding.</p>
+</div>
+<div class="event-items">
+    <div class="event-item">
+        <div class="event-img">
+            <img src="couples2.jpg" alt="">
+        </div>
+        <h2>The Reseption</h2>
+        <p>Royal-Residency Hotel , Noida , Uttar Pradesh</p>
+        <span>11:00 AM - 14:00 PM </span>
+    </div>
+    <div class="event-item">
+        <div class="event-img">
+            <img src="couples1.jpeg" alt="">
+        </div>
+        <h2>Wedding Party</h2>
+        <p>Royal-Residency Hotel , Noida , Uttar Pradesh</p>
+        <span>07:00 PM - 11:00 PM </span>
+    </div>
+</div>
+    </div>
+</section>
+ <!--rspvp-->
+ <section class="rsvp" id="rsvp">
+    <div class="rsvp-container">
+        <div class="title-text">
+            <div class="section-title">event</div>
+            <div class="main-title">our wedding event</div>
+            <div class="heart"><i class="fa-regular fa-heart fa-bounce"></i></div>
+        </div>
+        <form action="https://api.web3forms.com/submit" method="post">
+            <input type="hidden" name="access_key" value="2246ebe0-bd48-4fc0-9dab-9ca77831d7ef">
+            <input type="text" name="name" placeholder="Your name" required="required">
+            <input type="email" name="email" placeholder="Your email" required="required">
+            <input type="number" name="phone-no" placeholder="phone-number"          required="required">
+            <input type="text" name="address" placeholder="Your address" required="required">
+            <textarea name="message" cols="30" rows="10" placeholder="message"></textarea>
+           <!-- <a href="" class="rsvp-btn">Submit</a>-->
+            <br>
+            <center>
+            <button class="rsvp-btn">Submit</button></center>
+        </form>
+        
+    </div>
+ </section>
+
+   <!--footer-->
+   <footer class="footer" id="footer">
+    <div class="footer-container">
+        <div class="title-text">
+            
+            <div class="main-title">thank you</div>
+            <div class="heart"><i class="fa-solid fa-heart fa-beat" ></i></div>
+        </div>
+        <div class="social-media">
+            <a href="https://yuvraj-singh-001.github.io/tg/"> <i class="fa-brands fa-twitter"></i></a>
+            <a href=""> <i class="fa-brands fa-facebook"></i></a>
+           <a href="http://t.me/Iccuvi">  <i class="fa-brands fa-telegram"></i></a>
+           <a href="">  <i class="fa-brands fa-instagram"></i></a>
+         </div>
+         <h2>Yuvraj Singh | yuvraj@gmail.com</h2>
+         <div class="copy">
+            <p>&copy; All Rights Reserved</p>
+            <span>created by ❤️ yuvi</span>
+         </div>
+    </div>
+   </footer>
+
+    <!--scroll button-->
+    <div class="up">
+        <i class="fa-solid fa-chevron-up fa-beat"></i>
+    </div>
+
+    <!--js link-->
+    <script src="wedding.js"></script>
+   <!-- <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>-->
+</body>
+</html>
